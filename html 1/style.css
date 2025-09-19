@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f5f2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #232323;
+    padding: 20px;
+}
+
+.auth-container {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.8rem;
+    color: #232323;
+}
+
+.logo-accent {
+    color: #078080;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: #f8f5f2;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #078080;
+    box-shadow: 0 0 0 3px rgba(7, 128, 128, 0.15);
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    background-color: #078080;
+    color: white;
+}
+
+.btn-register {
+    background-color: white;
+    color: #232323;
+    border: 2px solid #e0e0e0;
+}
+
+
+.btn-login:hover {
+    background-color: #066666;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(7, 128, 128, 0.25);
+}
+
+
+.btn-register:hover {
+    border-color: #078080;
+    color: #078080;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+
+.form-footer {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.form-footer a {
+    color: #078080;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.form-footer a:hover {
+    color: #f45d48;
+    text-decoration: underline;
+}
+
+.tire-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #078080;
+}
+
+.welcome-text {
+    margin-bottom: 1.5rem;
+    color: #666;
+    line-height: 1.5;
+}
