@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - ПрофиШина</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ПрофиШина<span class="logo-accent">.RU</span></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html" class="active">Каталог</a>
+        </nav>
+        <button class="cart-btn">🛒 <span class="cart-count">0</span></button>
+    </header>
+
+    <main class="catalog">
+        <!-- Карточка 1 -->
+        <div class="product-card" onclick="openModal('bridgestone')">
+            <div class="product-img">
+                <img src="https://avatars.mds.yandex.net/i?id=7378bf4ec032d68978da0f2415cc4c245eb40b45-4768532-images-thumbs&n=13" alt="Летняя шина Bridgestone">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Шина летняя Bridgestone</h3>
+                <p class="product-price">8 490 ₽</p>
+            </div>
+            <button class="add-to-cart">В корзину</button>
+        </div>
+        
+        <!-- Карточка 2 -->
+        <div class="product-card" onclick="openModal('nokian')">
+            <div class="product-img">
+                <img src="https://avatars.mds.yandex.net/i?id=bcb12d1db346f5721591ab1494f9c49897231981-7755895-images-thumbs&n=13" alt="Шина зимняя Nokian">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Шина зимняя Nokian</h3>
+                <p class="product-price">9 990 ₽</p>
+            </div>
+            <button class="add-to-cart">В корзину</button>
+        </div>
+        
+        <!-- Карточка 3 -->
+        <div class="product-card" onclick="openModal('disks')">
+            <div class="product-img">
+                <img src="img/i (2).webp" alt="Диски литые">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Диски литые</h3>
+                <p class="product-price">12 500 ₽</p>
+            </div>
+            <button class="add-to-cart">В корзину</button>
+        </div>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-product">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="">
+                </div>
+                
+                <div class="modal-details">
+                    <h2 id="modalTitle">Шина летняя Bridgestone Turanza</h2>
+                    
+                    <div class="modal-price" id="modalPrice">8 490 ₽</div>
+                    
+                    <p id="modalDescription">Качественная летняя шина для легковых автомобилей. Обеспечивает отличное сцепление с дорогой и комфорт при движении.</p>
+                    
+                    <div class="size-selector">
+                        <div class="size-title">Выберите размер:</div>
+                        <div class="sizes">
+                            <div class="size" onclick="selectSize(this)">195/65 R15</div>
+                            <div class="size selected" onclick="selectSize(this)">205/55 R16</div>
+                            <div class="size" onclick="selectSize(this)">225/45 R17</div>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart-btn" onclick="addToCartFromModal()">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Практическая работа / Чумаков Лев / Шиномонтаж "ПрофиШина"
+    </footer>
+
+    <script>
+        // Данные товаров
+        const products = {
+            'bridgestone': {
+                title: 'Шина летняя Bridgestone Turanza',
+                price: '8 490 ₽',
+                description: 'Качественная летняя шина для легковых автомобилей. Обеспечивает отличное сцепление с дорогой и комфорт при движении.',
+                image: 'https://avatars.mds.yandex.net/i?id=7378bf4ec032d68978da0f2415cc4c245eb40b45-4768532-images-thumbs&n=13'
+            },
+            'nokian': {
+                title: 'Шина зимняя Nokian',
+                price: '9 990 ₽',
+                description: 'Надежная зимняя шина для безопасного вождения в холодное время года.',
+                image: 'https://avatars.mds.yandex.net/i?id=bcb12d1db346f5721591ab1494f9c49897231981-7755895-images-thumbs&n=13'
+            },
+            'disks': {
+                title: 'Диски литые',
+                price: '12 500 ₽',
+                description: 'Стильные литые диски для вашего автомобиля. Высокое качество и привлекательный дизайн.',
+                image: 'img/i (2).webp'
+            }
+        };
+
+        // Открытие модального окна
+        function openModal(productId) {
+            const product = products[productId];
+            document.getElementById('modalTitle').textContent = product.title;
+            document.getElementById('modalPrice').textContent = product.price;
+            document.getElementById('modalDescription').textContent = product.description;
+            document.getElementById('modalImg').src = product.image;
+            
+            document.getElementById('productModal').style.display = 'block';
+        }
+
+        // Закрытие модального окна
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+
+        // Выбор размера
+        function selectSize(element) {
+            // Убираем выделение у всех размеров
+            document.querySelectorAll('.size').forEach(size => {
+                size.classList.remove('selected');
+            });
+            // Добавляем выделение выбранному
+            element.classList.add('selected');
+        }
+
+        // Добавление в корзину из модального окна
+        function addToCartFromModal() {
+            const selectedSize = document.querySelector('.size.selected').textContent;
+            const productTitle = document.getElementById('modalTitle').textContent;
+            alert(`Товар "${productTitle}" (${selectedSize}) добавлен в корзину!`);
+            closeModal();
+            
+            // Обновляем счетчик корзины
+            const cartCount = document.querySelector('.cart-count');
+            cartCount.textContent = parseInt(cartCount.textContent) + 1;
+        }
+
+        // Закрытие модального окна при клике вне его
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
