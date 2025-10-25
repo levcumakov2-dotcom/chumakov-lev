@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - ПрофиШина</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ПрофиШина<span class="logo-accent">.RU</span></div>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="catalog.html">Каталог</a>
+        </nav>
+        <div class="header-right">
+            <button class="cart-btn">🛒<span class="cart-count">0</span></button>
+            <button class="logout-btn" onclick="auth.logout()">Выйти</button>
+        </div>
+    </header>
+
+    <main class="catalog">
+        <div class="product-card">
+            <div class="product-img">
+                 <img src="https://avatars.mds.yandex.net/i?id=7378bf4ec032d68978da0f2415cc4c245eb40b45-4768532-images-thumbs&n=13" alt="Летняя шина Bridgestone">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Шина летняя Bridgestone</h3>
+                <p class="product-price">8 490 ₽</p>
+            </div>
+            <button class="add-to-cart">В корзину</button>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-img">
+                 <img src="https://avatars.mds.yandex.net/i?id=bcb12d1db346f5721591ab1494f9c49897231981-7755895-images-thumbs&n=13" alt="Шина зимняя Nokian">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Шина зимняя Nokian</h3>
+                <p class="product-price">9 990 ₽</p>
+            </div>
+            <button class="add-to-cart">В корзину</button>
+        </div>
+        <div class="product-card">
+            <div class="product-img">
+                <img src="img/i (2).webp" alt="Диски литые">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Диски литые</h3>
+                <p class="product-price">12 500 ₽</p>
+            </div>
+            <button class="add-to-cart">В корзину</button>
+        </div>
+    </main>
+    <footer>
+        Практическая работа / Чумаков Лев / Шиномонтаж "ПрофиШина"
+    </footer>
+    <script type="module">
+        import { initApp } from './server/main.js';
+        import { auth } from './server/auth.js';
+        
+        window.auth = auth;
+        
+        initApp();
+    </script>
+</body>
+</html>
