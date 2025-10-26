@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шина летняя Bridgestone - ПрофиШина</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ПрофиШина<span class="logo-accent">.RU</span></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="product.html" class="active">Товары</a>
+        </nav>
+        <button class="cart-btn">🛒<span class="cart-count">0</span></button>
+    </header>
+
+    <div class="container">
+        <div class="product">
+            <div class="product-content">
+                <div class="product-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=7378bf4ec032d68978da0f2415cc4c245eb40b45-4768532-images-thumbs&n=13" alt="Шина летняя Bridgestone Turanza">
+                </div>
+                
+                <div class="product-details">
+                    <h1 class="product-title">Шина летняя Bridgestone Turanza</h1>
+                    
+                    <div class="product-price">8 490 ₽</div>
+                    
+                    <p>Качественная летняя шина для легковых автомобилей. Обеспечивает отличное сцепление с дорогой и комфорт при движении.</p>
+                    
+                    <div class="size-selector">
+                        <div class="size-title">Выберите размер:</div>
+                        <div class="sizes">
+                            <div class="size">195/65 R15</div>
+                            <div class="size selected">205/55 R16</div>
+                            <div class="size">225/45 R17</div>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Практическая работа / Чумаков Лев / Шиномонтаж "ПрофиШина"
+    </footer>
+
+    <script type="module">
+        import { initApp } from './server/main.js';
+        initApp();
+    </script> <script type="module">
+    import { initApp } from './server/main.js';
+    import { auth } from './server/auth.js';
+    
+    window.auth = auth;
+    
+    initApp();
+</script>
+</body>
+</html>
