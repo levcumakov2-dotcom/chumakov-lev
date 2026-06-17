@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата успешна | Фмгрупп</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Фмгрупп</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="payment-page">
+        <div class="container">
+            <div class="payment-success">
+                <div class="success-icon">✅</div>
+                <h1>Оплата прошла успешно!</h1>
+                <p>Ваш заказ №<span id="order-number"></span> оплачен</p>
+                <p>Сумма: <span id="order-amount"></span> ₽</p>
+                <p>Мы свяжемся с вами для уточнения деталей доставки</p>
+                <div class="success-actions">
+                    <a href="index.html" class="btn">На главную</a>
+                    <a href="orders.html" class="btn btn-secondary">Мои заказы</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('order-number').textContent = 
+                urlParams.get('orderId') || '---';
+            document.getElementById('order-amount').textContent = 
+                urlParams.get('amount') || '---';
+        });
+    </script>
+</body>
+</html>

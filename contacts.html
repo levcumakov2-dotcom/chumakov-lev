@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Фмгрупп</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Фмгрупп</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html" class="active">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <div class="icon" onclick="window.location.href='cart.html'">
+                        🛒
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a> / <span>Контакты</span>
+        </div>
+    </section>
+
+    <section class="contacts-page">
+        <div class="container">
+            <div class="contacts-hero">
+                <h1>Свяжитесь с нами</h1>
+                <p>Мы всегда рады помочь вам с выбором мебели и ответить на все вопросы</p>
+            </div>
+
+            <div class="contacts-layout">
+                <div class="contact-info">
+                    <h2>Контактная информация</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Телефоны</h3>
+                            <p>+7 (999) 123-45-67</p>
+                            <p>+7 (495) 765-43-21</p>
+                            <a href="tel:+79991234567" class="contact-link">Позвонить сейчас</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@fmgroup.ru</p>
+                            <p>sales@fmgroup.ru</p>
+                            <a href="mailto:info@fmgroup.ru" class="contact-link">Написать письмо</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div class="contact-details">
+                            <h3>Адрес</h3>
+                            <p>г. Москва, ул. Мебельная, 15</p>
+                            <p>БЦ "Комфорт", 3 этаж</p>
+                            <p>Пн-Пт: 9:00-21:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h3>Социальные сети</h3>
+                            <p>VK: vk.com/fmgroup</p>
+                            <p>Instagram: @fmgroup</p>
+                            <p>Telegram: @fmgroup_news</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Обратная связь</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Тема обращения</label>
+                            <select id="subject" name="subject">
+                                <option value="consultation">Консультация по товару</option>
+                                <option value="delivery">Доставка и сборка</option>
+                                <option value="warranty">Гарантийное обслуживание</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Сообщение *</label>
+                            <textarea id="message" name="message" placeholder="Опишите ваш вопрос..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <h2>Мы на карте</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        🗺️ Карта: г. Москва, ул. Мебельная, 15
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Часто задаваемые вопросы</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какой график работы магазина?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Наш магазин работает с понедельника по пятницу с 9:00 до 21:00, в субботу с 10:00 до 20:00, воскресенье - выходной.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Есть ли доставка в другие города?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы осуществляем доставку по всей России через транспортные компании. Стоимость доставки рассчитывается индивидуально.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Предоставляете ли вы услуги сборки?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, наши специалисты могут выполнить профессиональную сборку мебели. Стоимость сборки составляет 10% от стоимости товара.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какой срок гарантии на мебель?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы предоставляем гарантию 5 лет на всю мебель собственного производства и 2 года на импортные товары.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат и обмен</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (999) 123-45-67</li>
+                        <li>Email: info@fmgroup.ru</li>
+                        <li>Адрес: г. Москва, ул. Мебельная, 15</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Подписка</h3>
+                    <p>Подпишитесь на наши новости и акции</p>
+                    <form>
+                        <input type="email" placeholder="Ваш email" class="subscribe-input">
+                        <button type="submit" class="btn subscribe-btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Фмгрупп. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ функциональность
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isActive = answer.classList.contains('active');
+                    
+                    // Закрываем все ответы
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.classList.remove('active');
+                    });
+                    
+                    document.querySelectorAll('.faq-question').forEach(q => {
+                        q.querySelector('span:last-child').textContent = '+';
+                    });
+                    
+                    // Открываем текущий ответ если он был закрыт
+                    if (!isActive) {
+                        answer.classList.add('active');
+                        this.querySelector('span:last-child').textContent = '−';
+                    }
+                });
+            });
+            
+            // Обработка формы обратной связи
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

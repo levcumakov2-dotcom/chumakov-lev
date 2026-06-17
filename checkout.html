@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа | Фмгрупп</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Фмгрупп</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <div class="icon" onclick="window.location.href='cart.html'">
+                        🛒
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a> / <a href="cart.html">Корзина</a> / <span>Оформление заказа</span>
+        </div>
+    </section>
+
+    <section class="checkout-page">
+        <div class="container">
+            <h1 class="section-title">Оформление заказа</h1>
+            
+            <div class="checkout-layout">
+                <div class="checkout-form">
+                    <h2>Данные для доставки</h2>
+                    <form id="checkout-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Имя *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Фамилия *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Адрес доставки *</label>
+                            <textarea id="address" name="address" rows="3" required placeholder="Город, улица, дом, квартира"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comment">Комментарий к заказу</label>
+                            <textarea id="comment" name="comment" rows="3" placeholder="Дополнительные пожелания"></textarea>
+                        </div>
+                        
+                        <h2>Способ оплаты</h2>
+                        <div class="payment-methods">
+                            <div class="payment-method active">
+                                <input type="radio" name="payment" value="card" checked>
+                                <div class="payment-icon">💳</div>
+                                <div class="payment-info">
+                                    <h4>Банковская карта</h4>
+                                    <p>Оплата онлайн банковской картой</p>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" name="payment" value="qr">
+                                <div class="payment-icon">📱</div>
+                                <div class="payment-info">
+                                    <h4>Оплата по QR-коду</h4>
+                                    <p>СБП, банковский QR-код</p>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" name="payment" value="cash">
+                                <div class="payment-icon">💵</div>
+                                <div class="payment-info">
+                                    <h4>Наличными при получении</h4>
+                                    <p>Оплата наличными курьеру</p>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" name="payment" value="online">
+                                <div class="payment-icon">📱</div>
+                                <div class="payment-info">
+                                    <h4>Онлайн-банкинг</h4>
+                                    <p>СБП, Qiwi, Яндекс.Деньги</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Секция QR-кода (изначально скрыта) -->
+                        <div id="qr-payment-section" style="display: none; margin: 20px 0; padding: 20px; background: #f9f9f9; border-radius: 8px; border: 1px solid #eee;">
+                            <div class="qr-container">
+                                <h3>Оплата по QR-коду</h3>
+                                <div id="qr-code-placeholder">
+                                    <p>QR-код появится после подтверждения заказа</p>
+                                </div>
+                                <div id="payment-status" style="margin-top: 15px; font-weight: bold; color: #2c3e50;">
+                                    Статус: ожидание выбора оплаты
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- ЕДИНСТВЕННАЯ кнопка подтверждения -->
+                        <button type="submit" class="btn confirm-btn">Подтвердить заказ</button>
+                    </form>
+                </div>
+                
+                <div class="checkout-summary">
+                    <h2>Ваш заказ</h2>
+                    <div id="checkout-items">
+                        <!-- Товары будут загружены через JavaScript -->
+                    </div>
+                    <div class="checkout-total" id="checkout-total">
+                        Итого: 0 ₽
+                    </div>
+                    <p style="text-align: center; color: #666; margin-bottom: 20px;">
+                        Бесплатная доставка при заказе от 20 000 ₽
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат и обмен</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (999) 123-45-67</li>
+                        <li>Email: info@fmgroup.ru</li>
+                        <li>Адрес: г. Москва, ул. Мебельная, 15</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Подписка</h3>
+                    <p>Подпишитесь на наши новости и акции</p>
+                    <form>
+                        <input type="email" placeholder="Ваш email" class="subscribe-input">
+                        <button type="submit" class="btn subscribe-btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Фмгрупп. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

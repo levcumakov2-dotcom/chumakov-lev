@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фмгрупп | Мебельный магазин</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA мета-теги -->
+    <meta name="theme-color" content="#e74c3c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Фмгрупп">
+</head>
+<body>
+    <!-- остальной код -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Фмгрупп</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <div class="icon" onclick="window.location.href='cart.html'">
+                        🛒
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Создайте уют в вашем доме</h1>
+                <p>Широкий выбор качественной мебели для каждой комнаты от Фмгрупп</p>
+                <a href="catalog.html" class="btn">Перейти в каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">🚚</div>
+                    <h3>Бесплатная доставка</h3>
+                    <p>Доставляем мебель бесплатно при заказе от 20 000 ₽</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">⚡</div>
+                    <h3>Быстрая сборка</h3>
+                    <p>Профессиональная сборка мебели за 1-2 дня</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🛡️</div>
+                    <h3>Гарантия 3 года</h3>
+                    <p>Предоставляем расширенную гарантию на всю мебель</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">💎</div>
+                    <h3>Качественные материалы</h3>
+                    <p>Используем только экологичные и долговечные материалы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Категории товаров</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="window.location.href='catalog.html#living-room'">
+                    <img src="https://avatars.mds.yandex.net/i?id=a57c8598b41ce2c5a89382bb0631d60d975c97e2-16307795-images-thumbs&n=13" alt="Гостиная">
+                    <div class="category-name">Гостиная</div>
+                </div>
+                <div class="category-card" onclick="window.location.href='catalog.html#bedroom'">
+                    <img src="https://avatars.mds.yandex.net/i?id=10b056d61bff53ed42999e8fe37d00dc11fc49fc-7547473-images-thumbs&n=13" alt="Спальня">
+                    <div class="category-name">Спальня</div>
+                </div>
+                <div class="category-card" onclick="window.location.href='catalog.html#kitchen'">
+                    <img src="https://avatars.mds.yandex.net/i?id=a89b451fe716387f982b4dd86debd8f2b270d62b-7750971-images-thumbs&n=13" alt="Кухня">
+                    <div class="category-name">Кухня</div>
+                </div>
+                <div class="category-card" onclick="window.location.href='catalog.html#kids'">
+                    <img src="https://avatars.mds.yandex.net/i?id=1cdd3f4b4e9ddb872d9c817dc9f53ba850fd65cd-9147461-images-thumbs&n=13" alt="Детская">
+                    <div class="category-name">Детская</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Популярные товары</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="window.location.href='product.html'">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=209a21e0242cae56a5a23b4f2dc0c589a0e9261a-5234254-images-thumbs&n=13" alt="Диван">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Угловой диван "Комфорт"</h3>
+                        <div class="product-price">25 990 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":1,"name":"Угловой диван \"Комфорт\"","price":25990,"image":"https://avatars.mds.yandex.net/i?id=209a21e0242cae56a5a23b4f2dc0c589a0e9261a-5234254-images-thumbs&n=13"}'>В корзину</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" onclick="window.location.href='product.html'">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Кровать">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Кровать двуспальная "Люкс"</h3>
+                        <div class="product-price">34 500 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":2,"name":"Кровать двуспальная \"Люкс\"","price":34500,"image":"https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"}'>В корзину</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" onclick="window.location.href='product.html'">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=4da16a783f75e2e008acd085a8da7d245ee7b3f6-3917045-images-thumbs&n=13" alt="Стол">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Обеденный стол "Модерн"</h3>
+                        <div class="product-price">15 750 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":3,"name":"Обеденный стол \"Модерн\"","price":15750,"image":"https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"}'>В корзину</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" onclick="window.location.href='product.html'">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=03d80a766ce6af36efa599e952899c074c5326d8-6489726-images-thumbs&n=13" alt="Детская кровать">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Детская кровать "Радуга"</h3>
+                        <div class="product-price">18 900 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":4,"name":"Детская кровать \"Радуга\"","price":18900,"image":"https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"}'>В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Отзывы наших клиентов</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Заказывали угловой диван для гостиной. Качество превзошло ожидания! Доставили вовремя, собрали быстро. Очень довольны покупкой!"
+                    </div>
+                    <div class="testimonial-author">- Марина И.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Покупали детскую мебель. Ребенок в восторге! Все сделано качественно, без острых углов. Безопасно и красиво. Спасибо!"
+                    </div>
+                    <div class="testimonial-author">- Алексей П.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Отличный сервис! Помогли подобрать мебель для всей квартиры. Дизайнер проконсультировал бесплатно. Рекомендую!"
+                    </div>
+                    <div class="testimonial-author">- Светлана К.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат и обмен</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (999) 123-45-67</li>
+                        <li>Email: info@fmgroup.ru</li>
+                        <li>Адрес: г. Москва, ул. Мебельная, 15</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Подписка</h3>
+                    <p>Подпишитесь на наши новости и акции</p>
+                    <form>
+                        <input type="email" placeholder="Ваш email" class="subscribe-input">
+                        <button type="submit" class="btn subscribe-btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Фмгрупп. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

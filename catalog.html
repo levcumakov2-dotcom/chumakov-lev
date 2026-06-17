@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог мебели | Фмгрупп</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Фмгрупп</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" class="active">Каталог</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <div class="icon" onclick="window.location.href='cart.html'">
+                        🛒
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a> / <span>Каталог</span>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container">
+            <h1 class="section-title">Каталог мебели</h1>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="category">Категория:</label>
+                    <select id="category">
+                        <option value="all">Все категории</option>
+                        <option value="living-room">Гостиная</option>
+                        <option value="bedroom">Спальня</option>
+                        <option value="kitchen">Кухня</option>
+                        <option value="kids">Детская</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price">Цена:</label>
+                    <select id="price">
+                        <option value="all">Любая</option>
+                        <option value="0-10000">до 10 000 ₽</option>
+                        <option value="10000-30000">10 000 - 30 000 ₽</option>
+                        <option value="30000-50000">30 000 - 50 000 ₽</option>
+                        <option value="50000+">от 50 000 ₽</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="material">Материал:</label>
+                    <select id="material">
+                        <option value="all">Любой</option>
+                        <option value="wood">Дерево</option>
+                        <option value="metal">Металл</option>
+                        <option value="fabric">Ткань</option>
+                        <option value="leather">Кожа</option>
+                    </select>
+                </div>
+                <button class="filter-btn">Применить фильтры</button>
+            </div>
+
+            <div class="catalog-grid">
+                <!-- Гостиная -->
+                <div class="product-card" onclick="window.location.href='product.html?id=1'" data-category="living-room" data-price="25990" data-material="fabric">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Угловой диван">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Угловой диван "Комфорт"</h3>
+                        <div class="product-description">Просторный угловой диван с механизмом трансформации</div>
+                        <div class="product-price">25 990 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":1,"name":"Угловой диван \"Комфорт\"","price":25990,"image":"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"}'>В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product.html?id=5'" data-category="living-room" data-price="18900" data-material="leather">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Кожаное кресло">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Кресло кожаное "Престиж"</h3>
+                        <div class="product-description">Кожаное кресло с высокой спинкой для гостиной</div>
+                        <div class="product-price">18 900 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":5,"name":"Кресло кожаное \"Престиж\"","price":18900,"image":"https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"}'>В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Спальня -->
+                <div class="product-card" onclick="window.location.href='product.html?id=2'" data-category="bedroom" data-price="34500" data-material="wood">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Кровать">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Кровать двуспальная "Люкс"</h3>
+                        <div class="product-description">Массив дерева, ортопедическое основание</div>
+                        <div class="product-price">34 500 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":2,"name":"Кровать двуспальная \"Люкс\"","price":34500,"image":"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"}'>В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product.html?id=6'" data-category="bedroom" data-price="42300" data-material="wood">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=62b4b3fa573c124b34701f433ae03749082eca15-16547823-images-thumbs&n=13" alt="Шкаф-купе">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Шкаф-купе 3-дверный</h3>
+                        <div class="product-description">Вместительный шкаф с зеркальными дверями</div>
+                        <div class="product-price">42 300 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":6,"name":"Шкаф-купе 3-дверный","price":42300,"image":"https://avatars.mds.yandex.net/i?id=62b4b3fa573c124b34701f433ae03749082eca15-16547823-images-thumbs&n=13"}'>В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Кухня -->
+                <div class="product-card" onclick="window.location.href='product.html?id=3'" data-category="kitchen" data-price="15750" data-material="wood">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=4da16a783f75e2e008acd085a8da7d245ee7b3f6-3917045-images-thumbs&n=13" alt="Обеденный стол">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Обеденный стол "Модерн"</h3>
+                        <div class="product-description">Стол из массива дуба, расширяемая столешница</div>
+                        <div class="product-price">15 750 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":3,"name":"Обеденный стол \"Модерн\"","price":15750,"image":"https://avatars.mds.yandex.net/i?id=4da16a783f75e2e008acd085a8da7d245ee7b3f6-3917045-images-thumbs&n=13"}'>В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product.html?id=7'" data-category="kitchen" data-price="32400" data-material="metal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Кухонный гарнитур">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Кухонный гарнитур "Лайн"</h3>
+                        <div class="product-description">Современный кухонный гарнитур с барной стойкой</div>
+                        <div class="product-price">32 400 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":7,"name":"Кухонный гарнитур \"Лайн\"","price":32400,"image":"https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"}'>В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Детская -->
+                <div class="product-card" onclick="window.location.href='product.html?id=4'" data-category="kids" data-price="18900" data-material="wood">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=03d80a766ce6af36efa599e952899c074c5326d8-6489726-images-thumbs&n=13" alt="Детская кровать">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Детская кровать "Радуга"</h3>
+                        <div class="product-description">Безопасная кровать с бортиками, массив березы</div>
+                        <div class="product-price">18 900 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":4,"name":"Детская кровать \"Радуга\"","price":18900,"image":"https://avatars.mds.yandex.net/i?id=03d80a766ce6af36efa599e952899c074c5326d8-6489726-images-thumbs&n=13"}'>В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product.html?id=8'" data-category="kids" data-price="12400" data-material="wood">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=2eeacfb293651c695702f51f258bb804c59e8d6c-4078442-images-thumbs&n=13" alt="Детский стол">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Детский письменный стол</h3>
+                        <div class="product-description">Стол с регулируемой высотой, экологичные материалы</div>
+                        <div class="product-price">12 400 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":8,"name":"Детский письменный стол","price":12400,"image":"https://avatars.mds.yandex.net/i?id=2eeacfb293651c695702f51f258bb804c59e8d6c-4078442-images-thumbs&n=13"}'>В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product.html?id=9'" data-category="kids" data-price="8600" data-material="wood">
+                    <div class="product-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=21a4b86b89c9de1d7a9542a38b2659f13ea5ba2c-4390197-images-thumbs&n=13" alt="Детский стул">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Детский стул "Малыш"</h3>
+                        <div class="product-description">Эргономичный стул с регулировкой высоты</div>
+                        <div class="product-price">8 600 ₽</div>
+                        <button class="add-to-cart" data-product='{"id":9,"name":"Детский стул \"Малыш\"","price":8600,"image":"https://avatars.mds.yandex.net/i?id=21a4b86b89c9de1d7a9542a38b2659f13ea5ba2c-4390197-images-thumbs&n=13"}'>В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn next">→</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат и обмен</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (999) 123-45-67</li>
+                        <li>Email: info@fmgroup.ru</li>
+                        <li>Адрес: г. Москва, ул. Мебельная, 15</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Подписка</h3>
+                    <p>Подпишитесь на наши новости и акции</p>
+                    <form>
+                        <input type="email" placeholder="Ваш email" class="subscribe-input">
+                        <button type="submit" class="btn subscribe-btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Фмгрупп. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

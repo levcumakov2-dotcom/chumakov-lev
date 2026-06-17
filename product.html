@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угловой диван "Комфорт" | Фмгрупп</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Фмгрупп</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <div class="icon" onclick="window.location.href='cart.html'">
+                        🛒
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / <span>Угловой диван "Комфорт"</span>
+        </div>
+    </section>
+
+    <section class="product-page">
+        <div class="container">
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=209a21e0242cae56a5a23b4f2dc0c589a0e9261a-5234254-images-thumbs&n=13" alt="Угловой диван Комфорт">
+                    </div>
+                </div>
+                
+                <div class="product-info-detail">
+                    <h1>Угловой диван "Комфорт"</h1>
+                    <div class="product-rating">
+                        ★★★★☆ <span class="rating-count">(24 отзыва)</span>
+                    </div>
+                    <div class="product-price-large">25 990 ₽</div>
+                    <div class="product-actions">
+                        <div class="quantity">
+                            <label>Количество:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input" id="product-quantity">
+                                <button class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                        <button class="add-to-cart-large" id="add-to-cart-btn">Добавить в корзину</button>
+                    </div>
+                    
+                    <div class="product-features">
+                        <h3>Характеристики:</h3>
+                        <ul>
+                            <li><strong>Материал:</strong> Ткань велюр</li>
+                            <li><strong>Цвет:</strong> Серый</li>
+                            <li><strong>Размер:</strong> 220×160×90 см</li>
+                            <li><strong>Механизм:</strong> Еврокнижка</li>
+                            <li><strong>Наполнитель:</strong> ППУ, периотек</li>
+                            <li><strong>Страна производства:</strong> Россия</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-description-detail">
+                <h2>Описание товара</h2>
+                <p>Просторный угловой диван "Комфорт" станет центральным элементом вашей гостиной. Модель отличается эргономичным дизайном и высоким уровнем комфорта.</p>
+                <p>Диван оснащен удобным механизмом трансформации "еврокнижка", который позволяет легко превратить его в полноценное спальное место. Прочный каркас из массива дерева гарантирует долгий срок службы.</p>
+                
+                <h3>Преимущества:</h3>
+                <ul>
+                    <li>Вместительные ящики для хранения белья</li>
+                    <li>Съемные чехлы для легкой чистки</li>
+                    <li>Ортопедическое основание</li>
+                    <li>Устойчивые ножки с регулировкой высоты</li>
+                </ul>
+            </div>
+            
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат и обмен</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (999) 123-45-67</li>
+                        <li>Email: info@fmgroup.ru</li>
+                        <li>Адрес: г. Москва, ул. Мебельная, 15</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Подписка</h3>
+                    <p>Подпишитесь на наши новости и акции</p>
+                    <form>
+                        <input type="email" placeholder="Ваш email" class="subscribe-input">
+                        <button type="submit" class="btn subscribe-btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Фмгрупп. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
